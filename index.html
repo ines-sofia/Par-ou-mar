@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Par ou Ímpar</title>
+</head>
+<body>
+    <h1>Verificador de números - Par ou Ímpar</h1>
+
+    <p>Bem-vind@! Introduz um número e descobre se é par ou ímpar.</p>
+
+    <!-- Container que mantém tudo alinhado ao centro -->
+    <div class="container">
+
+        <!-- PAR -->
+        <div class="lado par-text" id="texto-par">PAR</div>
+
+        <!-- Formulário central -->
+        <form class="form" onsubmit="event.preventDefault(); verificar();">
+
+            <label for="numero">Introduz um número:</label>
+
+            <input type="number" id="numero" inputmode="numeric">
+
+            <button type="button" onclick="verificar()">Verificar</button>
+            <button type="button" class="reset" onclick="resetar()">Limpar</button>
+
+            <textarea id="resultado" readonly></textarea> <!-- Input mudou para textarea para melhor visualização do resultado -->
+        </form>
+
+        <!-- ÍMPAR -->
+        <div class="lado impar-text" id="texto-impar">ÍMPAR</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
